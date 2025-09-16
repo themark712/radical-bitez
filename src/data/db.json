@@ -1,0 +1,69 @@
+{
+  "tags": [
+    {
+      "id": "1",
+      "name": "Beef"
+    },
+    {
+      "id": "2",
+      "name": "Chicken"
+    },
+    {
+      "id": "3",
+      "name": "Pork"
+    },
+    {
+      "id": "4",
+      "name": "Vegetables"
+    },
+    {
+      "id": "5",
+      "name": "Italian"
+    },
+    {
+      "id": "6",
+      "name": "Casserole"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Ravioli Lasagna",
+      "datePosted": "Thursday, Sept 11, 2025 8:00PM",
+      "ingredients": [
+        {
+          "quantity": "12 oz bag",
+          "item": "Frozen ravioli",
+          "type": "frozen pasta"
+        },
+        {
+          "quantity": "12 oz jar",
+          "item": "Pasta or marinara sauce",
+          "type": "sauces"
+        },
+        {
+          "quantity": "16 oz bag",
+          "item": "Shredded mozzarella cheese",
+          "type": "dairy"
+        }
+      ],
+      "steps": [
+        "Preheat oven to 375 degrees F",
+        "In a 9x13 baking dish, spread a thin layer of pasta sauce of the bottom",
+        "On top of the sauce, arrange a single layer of ravioli",
+        "Spread a layer of pasta sauce over the ravioli",
+        "Sprinkle a layer of mozzarella cheese over the sauce",
+        "Repeat layering 2 more times, ending with a layer of cheese on top",
+        "Bake, uncovered, for 25 minutes or until cheese is melted, bubbly, and just starting to brown",
+        "Remove from oven and let rest for 5 minutes before serving"
+      ],
+      "author": "Mark",
+      "tags": [
+        6,
+        5
+      ],
+      "image": "",
+      "source": ""
+    }
+  ]
+}

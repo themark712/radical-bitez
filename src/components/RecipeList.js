@@ -1,4 +1,4 @@
-const RecipeList = () => {
+const RecipeList = (recipes, title) => {
   return ( 
     <div>RecipeList</div> 
   );

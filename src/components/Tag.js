@@ -1,4 +1,4 @@
-import TagList from './TagList'; // importing BlogList component
+import RecipeList from './RecipeList'; // importing BlogList component
 import useFetch from '../hooks/useFetch';
 
 const Home = () => {
@@ -29,7 +29,7 @@ const Home = () => {
   // An empty dependency value ([]) causes useEffect to run only at the initial render
 
   // use custom hook to fetch data
-  const { data: tags, isPending, error } = useFetch('http://localhost:8000/tags');
+  const { data: recipes, isPending, error } = useFetch('http://localhost:8000/recipes');
 
   return (
     <div className="home">
@@ -37,7 +37,7 @@ const Home = () => {
       {isPending && <div>Loading...</div>}
       <section className="container">
         <div>
-          {tags && <TagList tags={tags} title="Tags" />} 
+          {recipes && <RecipeList recipes={recipes} title="Recipes" />} 
         </div>
       </section>
     </div>

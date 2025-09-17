@@ -2,33 +2,39 @@
   "tags": [
     {
       "id": "1",
-      "name": "Beef"
+      "name": "Beef",
+      "image": ""
     },
     {
       "id": "2",
-      "name": "Chicken"
+      "name": "Chicken",
+      "image": ""
     },
     {
       "id": "3",
-      "name": "Pork"
+      "name": "Pork",
+      "image": ""
     },
     {
       "id": "4",
-      "name": "Vegetables"
+      "name": "Vegetables",
+      "image": ""
     },
     {
       "id": "5",
-      "name": "Italian"
+      "name": "Italian",
+      "image": ""
     },
     {
       "id": "6",
-      "name": "Casserole"
+      "name": "Casserole",
+      "image": ""
     }
   ],
   "recipes": [
     {
       "id": "1",
-      "title": "Ravioli Lasagna",
+      "name": "Ravioli Lasagna",
       "datePosted": "Thursday, Sept 11, 2025 8:00PM",
       "ingredients": [
         {

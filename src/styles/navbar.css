@@ -1,79 +1,87 @@
-/* NAVBAR */
-.header {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+nav {
   background-color: var(--secondary-color);
-  color: var(--text-primary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
 }
 
-.logo {
-  margin: 1rem;
+.logo-wrap {
+  letter-spacing: 0.15rem;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0 0.7rem;
+}
+
+.nav-link {
+  color: var(--text-primary-color);
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
   letter-spacing: 2px;
 }
 
-.logo img {
-  max-width: 120px;
-}
-
-.toggle {
-  font-size: 2rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-top: 0.75rem;
-  margin-right: 0.75rem;
-}
-
-.menu {
-  display: none;
-}
-
-.menu a:hover {
+.nav-link:hover {
   color: var(--purple-color);
 }
 
-.menu.active {
-  display: block;
-  font-size: 1rem;
-  text-align: center;
+/* mobile toggle button */
+#mobile-toggle-btn {
+  width: 30px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem auto;
+  cursor: pointer;
+  display: none;
 }
 
-.menu-items {
-  padding: 0.2rem 0;
+.toggle-btn-line {
+  border-bottom: 3px solid var(--primary-color);
 }
 
-.menu-items a {
-  color: var(--text-primary-color);
-}
-
-@media screen and (min-width:768px) {
-  .header {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+@media screen and (max-width:768px) {
+  nav {
+    flex-direction: column;
   }
 
-  .logo {
-    width: 30%;
-  }
-
-  .menu {
+  #mobile-toggle-btn {
     display: flex;
-    width: 70%;
-    font-size: 1rem;
-    justify-content: right;
   }
 
-  .menu-items {
-    padding: 0 0.8rem;
-  }
-
-  .menu-items:last-child {
-    padding-right: 1.5rem;
-  }
-
-  .toggle {
+  .nav-links {
     display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.25s ease-out forwards;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .logo-wrap {
+    text-align: center;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

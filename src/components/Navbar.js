@@ -1,31 +1,46 @@
 import React, { useState } from 'react';
-import { BiMenu, BiX } from 'react-icons/bi';
 import '../styles/navbar.css';
+//import '../scripts/script.js';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
   // handleClick toggles click state
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {setClick(!click);};
 
   return (
-    <header className="header">
-      <div className="logo">
-        <h2>Radical Bitez</h2>
-        {/* <img src="/img/logo.png" alt="logo" /> */}
-      </div>
-      <div className="toggle" onClick={handleClick}>
-        <span>{click ? <BiX /> : <BiMenu />}</span>
-      </div>
-      <ul className={click ? "menu active" : "menu"}>
-        <li className="menu-items"><a href="/">Home</a></li>
-        <li className="menu-items"><a href="/categories">Categories</a></li>
-        <li className="menu-items"><a href="/recipes">Recipes</a></li>
-        <li className="menu-items"><a href="/about">About</a></li>
-        <li className="menu-items"><a href="/contact">Contact</a></li>
-      </ul>
-    </header>
+    <div className="container">
+      <nav>
+        <div className="logo-wrap">
+          <h2>Radical Bitez</h2>
+        </div>
+        <div id="mobile-toggle-btn" onClick={handleClick}>
+          <div className="toggle-btn-line"></div>
+          <div className="toggle-btn-line"></div>
+          <div className="toggle-btn-line"></div>
+        </div>
+        <ul className={click ? "nav-links active" : "nav-links"}>
+          <li className="nav-item">
+            <a className="nav-link" href="/">Home</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/categories">Categories</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/recipes">Recipes</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/about">About</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
+
+
 
 export default Navbar;
